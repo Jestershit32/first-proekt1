@@ -4,7 +4,7 @@ export function Header() {
   return (
     <header>
       <nav className="header-nav">
-        <ul className="header-nav-ul ui">
+        <ul className="header-nav-ul">
           <NavLi value="main" />
           <NavLi value="content" />
           <NavLi value="contacts" />
