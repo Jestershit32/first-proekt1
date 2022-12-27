@@ -11,6 +11,7 @@ root.render(
   <div className='body2'>
     <Header />
     <FirstBlock />
+    <FirstBlock />
     <PhotoshopBlock />
   </div>
 );
