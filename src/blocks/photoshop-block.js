@@ -1,6 +1,5 @@
-import { useState } from "react"
-
-const imgs = [
+import { useState } from 'react';
+let imgsReq = [
     require('./img/1(1).jpg'),
     require('./img/1(2).jpg'),
     require('./img/1(3).jpg'),
@@ -9,6 +8,19 @@ const imgs = [
 ]
 
 export function PhotoshopBlock() {
+
+    const imgs = imgsReq.map((img, key) => {
+        if (key === 0) {
+            return ([img, "photoshop-block-gallery-1"])
+        } else if (key === 1) {
+            return ([img, "photoshop-block-gallery-2"])
+        } else {
+            return ([img, "photoshop-block-gallery-0"])
+        }
+
+    })
+    const [photoNum, setPhotoNum] = useState(imgs);
+
     return (
         <div className="photoshop-block" >
             <div className="photoshop-block-label">
@@ -19,19 +31,59 @@ export function PhotoshopBlock() {
                 Adobe Photoshop
             </div>
             <img src={require("./img/Group12.png")} className="photoshop-block-img-1" alt="" />
-            <Gallery imgGall_1={imgs} />
+            <Gallery photoNum={photoNum} />
+            <GalleryButton click={() => setPhotoNum(slyder(photoNum))} />
         </div>
     )
 }
 
-function Gallery(props) {
-    const [nums, setNums] = useState(props.imgGall_1.length)
 
+
+let imgNum = 1;
+function slyder(photoNum) {
+
+    if (photoNum.length === imgNum + 1) {
+        imgNum = 1;
+    } else {
+        imgNum++;
+    }
+    const photoNumNew = photoNum.map((photo, key) => {
+        if (key === imgNum - 1) {
+            photo[1] = "photoshop-block-gallery-1";
+        } else if (key === (imgNum)) {
+            photo[1] = "photoshop-block-gallery-2";
+        }
+        else {
+            photo[1] = "photoshop-block-gallery-0";
+        }
+        return photo;
+    })
+    return (photoNumNew)
+}
+
+
+function Gallery(props) {
+    const photoNum = props.photoNum;
+    const photoItems = photoNum.map((photo) =>
+        <GalleryItem url={photo[0]} style={photo[1]} />
+    );
     return (
-        <>
-            <img src={props.imgGall_1[nums - 1]} className="photoshop-block-gallery-1" alt="" />
-            <input type="button" onClick={() => { nums > 2 ? setNums(nums - 1) : setNums(props.imgGall_1.length) }} className="photoshop-block-button" value='>' />
-            <img src={props.imgGall_1[nums - 2]} className="photoshop-block-gallery-2" alt="" />
-        </>
+        photoItems
     )
 }
+
+
+function GalleryItem(props) {
+    return (
+        <img src={props.url} className={"animation " + props.style} alt="" />
+    )
+}
+function GalleryButton(props) {
+    return (
+        <input onClick={props.click} type="button" value=">" className="photoshop-block-button" />
+    )
+}
+
+
+
+
