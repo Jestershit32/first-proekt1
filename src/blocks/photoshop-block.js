@@ -80,7 +80,7 @@ function GalleryItem(props) {
 }
 function GalleryButton(props) {
     return (
-        <input onClick={props.click} type="button" value=">" className="photoshop-block-button" />
+        <input onClick={props.click} type="button" value=">" className="animation photoshop-block-button" />
     )
 }
 

@@ -4,6 +4,7 @@ import './index.css';
 import { Header } from './blocks/header';
 import { FirstBlock } from './blocks/first-block';
 import { PhotoshopBlock } from "./blocks/photoshop-block"
+import { IllustratorBlock } from './blocks/illustrator-block';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,6 +13,7 @@ root.render(
     <Header />
     <FirstBlock />
     <PhotoshopBlock />
+    <IllustratorBlock />
   </div>
 );
 

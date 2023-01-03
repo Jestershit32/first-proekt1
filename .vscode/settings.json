@@ -10,7 +10,7 @@
 "editor.tabSize": 4,
 "files.autoSave": "onWindowChange",
 "editor.renderWhitespace": "selection",
-"editor.wordWrap": "bounded",
+"editor.wordWrap": "off",
 "editor.bracketPairColorization.enabled": true,
 "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
 "editor.folding": false,
@@ -34,5 +34,10 @@
 "editor.linkedEditing": true,
 "editor.language.brackets": [
 
-]
+],
+"cSpell.words": [
+    "векторная",
+    "ГРАФИКА"
+],
+"diffEditor.wordWrap": "off"
 }
