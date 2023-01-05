@@ -5,10 +5,10 @@ export function Header() {
     <header>
       <nav className="header-nav">
         <ul className="header-nav-ul">
-          <NavLi value="main" />
-          <NavLi value="content" />
-          <NavLi value="contacts" />
-          <NavLi value="credits" />
+          <NavLi value="photoshop" />
+          <NavLi value="illustrator" />
+          <NavLi value="Figma" />
+          <NavLi value="Node_Js" />
         </ul>
       </nav>
     </header>
@@ -20,7 +20,7 @@ export function Header() {
 function NavLi(props) {
   return (
     <li className="header-nav-ul-il">
-      <a href={'/' + props.value} className={`header-nav-ul-il-a ${window.location.pathname === ('/' + props.value) ? 'header-nav-ul-il-a-active ' : '23423'}`}>
+      <a href={'/#' + props.value} className={`header-nav-ul-il-a`}>
         {props.value}
       </a>
     </li >

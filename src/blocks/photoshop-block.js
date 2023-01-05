@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 let imgsReq = [
     require('./img/1(1).jpg'),
     require('./img/1(2).jpg'),
@@ -22,7 +23,7 @@ export function PhotoshopBlock() {
     const [photoNum, setPhotoNum] = useState(imgs);
 
     return (
-        <div className="photoshop-block" >
+        <div id="photoshop" className="photoshop-block" >
             <div className="photoshop-block-label">
                 / /растровая
                 ГРАФИКА

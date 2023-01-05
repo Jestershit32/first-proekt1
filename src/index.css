@@ -3,26 +3,22 @@
 	margin: 0px;
 	box-sizing: border-box;
 }
+
+@media screen and (prefers-reduced-motion: reduce) {
+	.body2 {
+		scroll-behavior: smooth;
+	}
+}
 .body2 {
 	width: 100%;
 	padding-top: 32px;
 	height: 10000px;
 	animation: back 30s ease-in infinite;
 	background-image: url(blocks/img/Frame.png), url(blocks/img/Frame-1.png);
+	background-position: 70% 100px, -170px 3100px;
 	background-repeat: no-repeat;
 	background-clip: border-box;
 	overflow: hidden;
-}
-@keyframes back {
-	from {
-		background-position: 70% 100px, -170px 3100px;
-	}
-	50% {
-		background-position: 40% 200px, -200px 3300px;
-	}
-	to {
-		background-position: 70% 100px, -170px 3100px;
-	}
 }
 .background-vector-1 {
 	width: 100%;
@@ -180,8 +176,8 @@ header {
 	position: absolute;
 	left: 400px;
 	top: 300px;
-	width: 0px;
-	height: 0px;
+	width: 1px;
+	height: 1px;
 	z-index: -2;
 	border-radius: 100%;
 	background: none;
@@ -224,6 +220,7 @@ header {
 	font-weight: 100;
 	font-size: 150px;
 	color: #b244ff;
+	z-index: 201;
 }
 .photoshop-block-button:hover {
 	background-color: #b244ff;
@@ -283,4 +280,51 @@ header {
 }
 .illustrator-block-gallery-item:hover {
 	padding: 20px;
+}
+
+/* Figma block */
+.figma-block {
+	position: relative;
+	width: 100%;
+	padding: 100px 200px;
+	font-family: "Roboto";
+	font-style: normal;
+}
+.figma-block-zagolovok {
+	display: flex;
+	flex-wrap: wrap;
+	width: 500px;
+	font-weight: 500;
+	font-size: 72px;
+	letter-spacing: 0.075em;
+}
+.figma-block-zagolovok-h1-second {
+	color: #41ffb9;
+}
+.figma-block-zagolovok-h1-first {
+	color: #b244ff;
+}
+.fidma-block-designtext {
+	position: absolute;
+	top: 150px;
+	right: 0px;
+	width: 800px;
+	background: rgba(65, 255, 185, 0.5);
+	backdrop-filter: blur(4px);
+	padding: 30px 200px 30px 30px;
+	font-weight: 500;
+	font-size: 40px;
+	color: #b244ff;
+	text-align: right;
+}
+.figma-block-iframe-figma {
+	width: 100%;
+	height: 780px;
+	background-color: #41ffb9;
+}
+.figma-block-label-small {
+	font-weight: 500;
+	font-size: 24px;
+	margin: 10px;
+	color: #b244ff;
 }
