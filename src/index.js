@@ -6,6 +6,7 @@ import { FirstBlock } from './blocks/first-block';
 import { PhotoshopBlock } from "./blocks/photoshop-block"
 import { IllustratorBlock } from './blocks/illustrator-block';
 import { FigmaBlock } from './blocks/figma-block';
+import { CssBlock } from './blocks/cssblock/cssblock';
 
 
 
@@ -17,6 +18,8 @@ root.render(
     <PhotoshopBlock />
     <IllustratorBlock />
     <FigmaBlock />
+    <CssBlock />
+
   </div>
 );
 
