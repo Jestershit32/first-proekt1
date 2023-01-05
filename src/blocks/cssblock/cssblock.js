@@ -1,9 +1,9 @@
 import styled from "styled-components"
 
-const OsnBlock = styled.div`
+const ComponentBlock = styled.div`
 background-color: aquamarine;
 width: 100%;
-
+padding: 200px;
 `;
 
 
@@ -12,9 +12,9 @@ export function CssBlock() {
 
     return (
         <>
-            <OsnBlock>
-
-            </OsnBlock>
+            <ComponentBlock>
+                1
+            </ComponentBlock>
         </>
     )
 
